@@ -1,0 +1,3 @@
+**/*.pem
+**/vault.yml
+**/.DS_Store

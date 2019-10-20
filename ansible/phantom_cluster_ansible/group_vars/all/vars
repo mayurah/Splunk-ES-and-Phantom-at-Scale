@@ -1,0 +1,23 @@
+---
+
+# credentials
+srv_ad-pass: "{{ vault_srv_ad-pass }}"
+# splunk credentials
+auth_cred: "{{ vault_auth_cred_new }}"
+splunk_cred: "{{ vault_auth_cred_new }}"
+splunk_local_user_name: "{{ vault_splk_adm }}"
+splunk_local_user_pass: "{{ vault_splk_adm_new_pw }}"
+# splunk_dft_cred: "{{ vault_splk_dft_cred }}"
+splunk_dft_cred: "{{ vault_splk_dft_cred }}"
+new_user: "{{ vault_sys_ans_usr }}"
+new_pass: "{{ vault_sys_ans_usr_pw }}"
+
+# general environment vars
+splunk_home: /opt/splunk
+splunk_user: splunk
+lm_uri: https://127.0.0.1:8089
+idx_cm_uri: https://127.0.0.1.sv.splunk.com:8089
+eid: splunk
+rep_port: 9887
+mgmt_port: 8089
+splunk_ports: ['8000', '8065', '8088', '8089', '8191', '9887', '9997', '9998']

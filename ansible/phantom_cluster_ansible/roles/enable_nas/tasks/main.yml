@@ -1,0 +1,12 @@
+---
+  - name: sudo to root
+    sudo: true
+    sudo_user: root
+    shell: |
+      echo change phantom mode to NFS
+      echo :D
+    register: ps
+
+  - debug: msg={{ ps.stdout }}
+
+  - debug: var=ps

@@ -1,0 +1,8 @@
+---
+
+- hosts: dev_phantom_hosts
+  sudo: yes
+  roles:
+    - phantom-start
+    - enable_nas
+#    - splunk_gen_cli-search
