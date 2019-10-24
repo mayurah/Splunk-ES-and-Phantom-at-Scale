@@ -104,10 +104,31 @@ sudo phenv python2.7 /opt/phantom/bin/initialize.py --init-guid -- force
 ```
 If you are facing any problems/issues while installing Phantom Cluster node, please check the logs generated according to your current timestamp.
 
+##### Clustered Enterprise Security on Search Head Cluster
 
+  - Installing Splunk ES on SHC environment: https://docs.splunk.com/Documentation/ES/5.3.1/Install/InstallEnterpriseSecuritySHC
+
+  - SHC Architecture: https://docs.splunk.com/Documentation/Splunk/8.0.0/DistSearch/SHCarchitecture
+
+  - Pre-req. & Arch consideration: https://docs.splunk.com/Documentation/Splunk/8.0.0/DistSearch/SHCsystemrequirements
 
 ## Optional Ansible Deployment Scripts
 
+## Reference Troubleshooting
+
+```
+# Fix DNS Issues if any
+echo -e "search us-west-1.compute.internal\nnameserver 1.1.1.1\nnameserver 8.8.8.8\nnameserver 10.0.0.2" > /etc/resolv.conf
+
+
+# Ensure  `hostname` assigned to the cluster is resolvable.
+
+cat /etc/hosts
+127.0.0.1   localhost localhost.localdomain localhost4 localhost4.localdomain4
+::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
+10.0.0.45   blah ip-10-0-0-45.us-west-1.compute.internal
+
+```
 
 ##### Credit
 
